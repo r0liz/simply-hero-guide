@@ -1,7 +1,6 @@
 import { useEffect, useRef } from "react";
 import lottie, { type AnimationItem } from "lottie-web";
 import animationData from "@/assets/lottie-flow";
-import sendMessageVideo from "@/assets/send-message-animation.webm";
 
 const BusinessModelLottie = () => {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -39,7 +38,21 @@ const BusinessModelLottie = () => {
         </div>
 
         <div className="grid lg:grid-cols-12 gap-10 items-center">
-          <div className="lg:col-span-6 space-y-6">
+          <div className="lg:col-span-7 relative">
+            <div className="bg-primary-foreground/[0.04] border border-primary-foreground/15 rounded-sm backdrop-blur-sm p-6 lg:p-10">
+              <div
+                ref={containerRef}
+                style={{ width: "100%", maxWidth: 560, margin: "0 auto", aspectRatio: "4 / 3" }}
+              />
+              <div className="mt-6 grid grid-cols-3 text-center font-mono text-[10px] tracking-[0.18em] uppercase text-primary-foreground/55">
+                <span>① Sender</span>
+                <span className="text-accent-soft">② 47-pt Audit</span>
+                <span>③ Primary Inbox</span>
+              </div>
+            </div>
+          </div>
+
+          <div className="lg:col-span-5 space-y-6">
             {[
               {
                 title: "We scan, you send",
@@ -64,26 +77,6 @@ const BusinessModelLottie = () => {
                 </p>
               </div>
             ))}
-
-            <div ref={containerRef} className="hidden" aria-hidden />
-          </div>
-
-          <div className="lg:col-span-6 relative">
-            <div className="bg-primary-foreground/[0.04] border border-primary-foreground/15 rounded-sm backdrop-blur-sm p-4 lg:p-6 shadow-glow">
-              <video
-                src={sendMessageVideo}
-                autoPlay
-                loop
-                muted
-                playsInline
-                className="w-full h-auto rounded-sm"
-              />
-              <div className="mt-4 flex items-center justify-center gap-6 font-mono text-[10px] tracking-[0.18em] uppercase text-primary-foreground/55">
-                <span>① Sender</span>
-                <span className="text-accent-soft">② 47-pt Audit</span>
-                <span>③ Primary Inbox</span>
-              </div>
-            </div>
           </div>
         </div>
       </div>
