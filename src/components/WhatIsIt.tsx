@@ -2,24 +2,24 @@ import { Mail, Server, FileSearch } from "lucide-react";
 
 const WhatIsIt = () => {
   return (
-    <section id="que-es" className="py-24 lg:py-32 bg-background">
+    <section id="what" className="py-24 lg:py-32 bg-background">
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
         <div className="grid lg:grid-cols-12 gap-12 items-end mb-16 pb-8 border-b-2 border-primary/90">
           <div className="lg:col-span-3">
             <span className="font-mono text-xs tracking-[0.25em] uppercase text-accent-deep">
-              01 · Qué es
+              01 · What it is
             </span>
             <p className="font-display text-6xl lg:text-7xl text-muted-foreground/40 mt-3 leading-none">
-              Qué.
+              What.
             </p>
           </div>
           <div className="lg:col-span-9">
             <h2 className="font-display text-4xl lg:text-5xl text-primary leading-tight">
-              Un auditor técnico de entregabilidad para emails fríos y de marketing.
+              A technical deliverability auditor for cold and marketing emails.
             </h2>
             <p className="font-body italic text-xl text-muted-foreground mt-4 max-w-2xl">
-              Escaneamos 47 puntos de tu infraestructura y contenido para detectar exactamente
-              por qué tus correos terminan en Spam — y cómo arreglarlo.
+              We scan 47 signals across your infrastructure and content to pinpoint
+              exactly why your emails end up in Spam — and how to fix it.
             </p>
           </div>
         </div>
@@ -28,18 +28,18 @@ const WhatIsIt = () => {
           {[
             {
               icon: Server,
-              title: "Infraestructura DNS",
-              body: "SPF, DKIM, DMARC, BIMI, MX, PTR. Validamos cada registro con los proveedores reales (Google, Microsoft, Yahoo).",
+              title: "DNS infrastructure",
+              body: "SPF, DKIM, DMARC, BIMI, MX, PTR. We validate every record against the real providers (Google, Microsoft, Yahoo).",
             },
             {
               icon: Mail,
-              title: "Reputación de IP & dominio",
-              body: "Cruzamos +30 blacklists, score de Sender Score, edad del dominio y patrón de envío para predecir el inbox placement.",
+              title: "IP & domain reputation",
+              body: "We cross-check 30+ blacklists, Sender Score, domain age and sending patterns to predict inbox placement.",
             },
             {
               icon: FileSearch,
-              title: "Huella de contenido",
-              body: "Análisis de HTML, ratio texto/imagen, links sospechosos, palabras gatillo y headers. Igual que lo hace un filtro anti-spam.",
+              title: "Content fingerprint",
+              body: "HTML analysis, text-to-image ratio, suspicious links, trigger words and headers — exactly like a spam filter does.",
             },
           ].map((c) => (
             <article

@@ -13,9 +13,9 @@ const Navbar = () => {
           </span>
         </a>
         <nav className="hidden md:flex items-center gap-8 font-mono text-[10px] tracking-[0.2em] uppercase text-primary-foreground/60">
-          <a href="#que-es" className="hover:text-primary-foreground transition-colors">¿Qué es?</a>
-          <a href="#por-que" className="hover:text-primary-foreground transition-colors">¿Por qué?</a>
-          <a href="#como" className="hover:text-primary-foreground transition-colors">¿Cómo?</a>
+          <a href="#what" className="hover:text-primary-foreground transition-colors">What</a>
+          <a href="#why" className="hover:text-primary-foreground transition-colors">Why</a>
+          <a href="#how" className="hover:text-primary-foreground transition-colors">How</a>
         </nav>
         <span className="hidden sm:block font-mono text-[10px] tracking-[0.2em] uppercase text-primary-foreground/55">
           Email Deliverability Auditor
