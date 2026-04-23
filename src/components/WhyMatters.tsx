@@ -1,30 +1,30 @@
 const stats = [
-  { v: "21%", l: "de los emails B2B legítimos terminan en Spam", color: "warning" },
-  { v: "+40%", l: "de open rate al pasar de Promociones a Principal", color: "success" },
-  { v: "$0.42", l: "ingreso promedio por email entregado correctamente", color: "accent" },
-  { v: "99.9%", l: "objetivo de tasa de entrega tras la auditoría", color: "primary" },
+  { v: "21%", l: "of legitimate B2B emails land in Spam", color: "warning" },
+  { v: "+40%", l: "open-rate lift moving from Promotions to Primary", color: "success" },
+  { v: "$0.42", l: "average revenue per properly delivered email", color: "accent" },
+  { v: "99.9%", l: "target delivery rate after the audit", color: "primary" },
 ];
 
 const WhyMatters = () => {
   return (
-    <section id="por-que" className="py-24 lg:py-32 bg-secondary/40">
+    <section id="why" className="py-24 lg:py-32 bg-secondary/40">
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
         <div className="grid lg:grid-cols-12 gap-12 items-end mb-16 pb-8 border-b-2 border-primary/90">
           <div className="lg:col-span-3">
             <span className="font-mono text-xs tracking-[0.25em] uppercase text-accent-deep">
-              02 · Por qué importa
+              02 · Why it matters
             </span>
             <p className="font-display text-6xl lg:text-7xl text-muted-foreground/40 mt-3 leading-none">
-              Por qué.
+              Why.
             </p>
           </div>
           <div className="lg:col-span-9">
             <h2 className="font-display text-4xl lg:text-5xl text-primary leading-tight">
-              Un email en Spam es un cliente que nunca existió.
+              An email in Spam is a customer that never existed.
             </h2>
             <p className="font-body italic text-xl text-muted-foreground mt-4 max-w-2xl">
-              No importa cuán bueno sea tu copy si tu correo no llega. La entregabilidad
-              es el multiplicador silencioso de cada campaña.
+              No matter how good your copy is, it doesn't matter if your email never
+              lands. Deliverability is the silent multiplier of every campaign.
             </p>
           </div>
         </div>
@@ -59,20 +59,20 @@ const WhyMatters = () => {
         <div className="grid lg:grid-cols-2 gap-6">
           <div className="bg-card border-l-[3px] border-l-destructive border border-border p-8">
             <span className="font-mono text-[10px] tracking-[0.2em] uppercase text-destructive font-bold">
-              Sin Land in Main
+              Without Land in Main
             </span>
             <p className="font-body text-lg text-muted-foreground mt-3 leading-relaxed">
-              Envías 10.000 emails. 2.100 caen en Spam. Pierdes leads, dañas tu reputación
-              de IP y los próximos envíos rinden aún peor. Espiral descendente.
+              You send 10,000 emails. 2,100 land in Spam. You lose leads, damage your IP
+              reputation, and the next sends perform even worse. A downward spiral.
             </p>
           </div>
           <div className="bg-card border-l-[3px] border-l-[hsl(var(--success))] border border-border p-8">
             <span className="font-mono text-[10px] tracking-[0.2em] uppercase text-[hsl(var(--success))] font-bold">
-              Con Land in Main
+              With Land in Main
             </span>
             <p className="font-body text-lg text-muted-foreground mt-3 leading-relaxed">
-              Llegas al 99.9% de inboxes. Tu reputación crece con cada envío, los filtros
-              te marcan como confiable y cada campaña rinde más que la anterior.
+              You hit 99.9% of inboxes. Your reputation grows with every send, filters
+              flag you as trusted, and each campaign outperforms the last.
             </p>
           </div>
         </div>
