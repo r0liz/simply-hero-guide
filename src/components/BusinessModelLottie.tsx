@@ -1,4 +1,5 @@
-import Lottie from "lottie-react";
+import { useEffect, useRef } from "react";
+import lottie, { type AnimationItem } from "lottie-web";
 import animationData from "@/assets/lottie-flow";
 
 const BusinessModelLottie = () => {
