@@ -1,7 +1,22 @@
-import Lottie from "lottie-react";
+import { useEffect, useRef } from "react";
+import lottie, { type AnimationItem } from "lottie-web";
 import animationData from "@/assets/lottie-flow";
 
 const BusinessModelLottie = () => {
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (!containerRef.current) return;
+    const anim: AnimationItem = lottie.loadAnimation({
+      container: containerRef.current,
+      renderer: "svg",
+      loop: true,
+      autoplay: true,
+      animationData,
+    });
+    return () => anim.destroy();
+  }, []);
+
   return (
     <section className="py-24 lg:py-32 bg-primary text-primary-foreground relative overflow-hidden">
       <div className="absolute inset-0 opacity-[0.06] bg-grid pointer-events-none" />
@@ -25,11 +40,9 @@ const BusinessModelLottie = () => {
         <div className="grid lg:grid-cols-12 gap-10 items-center">
           <div className="lg:col-span-7 relative">
             <div className="bg-primary-foreground/[0.04] border border-primary-foreground/15 rounded-sm backdrop-blur-sm p-6 lg:p-10">
-              <Lottie
-                animationData={animationData}
-                loop
-                autoplay
-                style={{ width: "100%", height: "auto", maxWidth: 560, margin: "0 auto" }}
+              <div
+                ref={containerRef}
+                style={{ width: "100%", maxWidth: 560, margin: "0 auto", aspectRatio: "4 / 3" }}
               />
               <div className="mt-6 grid grid-cols-3 text-center font-mono text-[10px] tracking-[0.18em] uppercase text-primary-foreground/55">
                 <span>① Sender</span>
